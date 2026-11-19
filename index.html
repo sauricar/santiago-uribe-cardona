@@ -20,20 +20,24 @@
   <link rel="icon" href="assets/icon.png" type="image/png">
   <link rel="preload" href="assets/plus-jakarta-sans.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
+  <script src="site.js" defer></script>
 </head>
 <body id="inicio">
   <a class="skip" href="#contenido">Ir al contenido</a>
   <header class="header">
     <div class="shell masthead">
       <a class="signature" href="#inicio" aria-label="Santiago Uribe, inicio"><span class="monogram" aria-hidden="true">SU</span><span>Santiago Uribe</span></a>
-      <nav aria-label="Navegación principal">
+      <button class="menu-toggle" type="button" aria-controls="navegacion" aria-expanded="false">Menú</button>
+      <nav id="navegacion" aria-label="Navegación principal">
         <a href="#enfoque">Enfoque</a>
         <a href="#trayectoria">Trayectoria</a>
+        <a href="#desarrollos">Desarrollos</a>
         <a href="#formacion">Formación</a>
         <a href="#credenciales">Credenciales</a>
       </nav>
       <a class="header-contact" href="https://www.linkedin.com/in/santiago-j-uribe-cardona/">LinkedIn</a>
     </div>
+    <div class="reading-progress" aria-hidden="true"></div>
   </header>
 
   <main id="contenido">
@@ -48,7 +52,7 @@
         <figcaption><span>Ingeniería de producción</span><span class="location">Colombia</span></figcaption>
       </figure>
       <div class="hero-summary">
-        <p class="hero-intro">Ingeniero de petróleos en Ecopetrol. Trabajo en optimización de producción, recobro secundario y analítica aplicada a la operación.</p>
+        <p class="hero-intro">Ingeniero de petróleos en Ecopetrol. Integro producción, inyección de agua y análisis de datos para diagnosticar pozos, optimizar redes y mejorar la gestión energética.</p>
         <div class="actions">
           <a class="button" href="#trayectoria">Explorar mi trayectoria</a>
           <a class="text-link" href="https://www.linkedin.com/in/santiago-j-uribe-cardona/">Conectar en LinkedIn</a>
@@ -60,7 +64,7 @@
       <div class="shell split">
         <div class="section-intro">
           <h2 id="enfoque-titulo">Mi enfoque</h2>
-          <p>Combino experiencia de campo y análisis de información para mejorar la continuidad operativa y la eficiencia energética. He desarrollado herramientas para automatizar el diagnóstico de pozos y coordino decisiones entre equipos de yacimientos y operaciones.</p>
+          <p>El trabajo empieza en el campo y se apoya en información confiable. Combino vigilancia de pozos, evaluación hidráulica y desarrollo de software para convertir las condiciones de operación en decisiones de ingeniería.</p>
         </div>
         <dl class="practice">
           <div><dt>Producción y levantamiento artificial</dt><dd>Monitoreo de pozos con bombeo electrosumergible y optimización de redes de recolección y evacuación de fluidos.</dd></div>
@@ -68,34 +72,51 @@
           <div><dt>Información operativa</dt><dd>Gobernanza de datos, automatización de diagnósticos y tableros para decisiones de campo.</dd></div>
         </dl>
       </div>
+      <div class="shell flow-shell">
+        <ol class="engineering-flow" aria-label="Cómo conecto la operación con las decisiones">
+          <li><span class="flow-node" aria-hidden="true"></span><h3>Campo</h3><p>Pozos, bombeo electrosumergible y redes de agua.</p></li>
+          <li><span class="flow-node" aria-hidden="true"></span><h3>Información</h3><p>Diagnóstico, balances y análisis de datos operativos.</p></li>
+          <li><span class="flow-node" aria-hidden="true"></span><h3>Decisión</h3><p>Ajustes de operación, intervenciones y gestión energética.</p></li>
+        </ol>
+      </div>
     </section>
 
     <section class="section shell" id="trayectoria" aria-labelledby="trayectoria-titulo">
       <h2 id="trayectoria-titulo">Trayectoria</h2>
-      <p class="career-intro">Del monitoreo de pozos y la automatización de diagnósticos a la coordinación técnica de redes de superficie y proyectos de recobro secundario.</p>
+      <p class="career-intro">Más de cinco años en producción e inyección de agua. De la vigilancia de pozos a la puesta en marcha de facilidades y la optimización de redes.</p>
       <article class="employer">
         <div class="employer-heading">
           <h3>Ecopetrol</h3>
           <p>Castilla la Nueva, Meta</p>
+          <p class="employment-note">Empleado directo desde septiembre de 2021. Asignaciones funcionales.</p>
         </div>
         <ol class="timeline">
           <li class="role">
-            <p class="date"><time datetime="2023-11">Nov. 2023</time> – actualidad</p>
-            <h4>Ingeniero Junior de Producción</h4>
-            <p class="role-summary">Gestiono la continuidad operativa de los sistemas de levantamiento artificial, inyección y evacuación de fluidos en Campo Castilla.</p>
+            <p class="date"><time datetime="2025-10">Oct. 2025</time> – actualidad</p>
+            <h4>Ingeniero de Sistema de Recolección y Evacuación</h4>
+            <p class="role-summary">Seguimiento de redes de recolección, inyección y evacuación de agua, evaluación hidráulica con PIPESIM y coordinación técnica con proyectos.</p>
             <ul class="role-details">
-              <li><strong>Redes de superficie.</strong> Superviso la capacidad de evacuación y coordino con el equipo de proyectos iniciativas para ampliar u optimizar las redes de transporte.</li>
-              <li><strong>Recobro secundario.</strong> Monitoreo y balanceo patrones de inyección de agua para mejorar el barrido del yacimiento.</li>
-              <li><strong>Decisiones operativas.</strong> Facilito el trabajo entre yacimientos y operaciones de campo para alinear los objetivos de inyección con la producción observada.</li>
+              <li><strong>Arranque de facilidades.</strong> Lideré el alistamiento y arranque de dos sistemas CLIA de sostenimiento de presión, con capacidad instalada conjunta de 225.000 barriles de agua/día.</li>
+              <li><strong>Interconexión de redes.</strong> Planeé y lideré la interconexión de dos líneas en un sistema de 5 km hacia ASA La Aguarupaya. La capacidad de evacuación aumentó de 70.000 a 120.000 barriles de agua/día.</li>
+              <li><strong>Integridad.</strong> Participo en el Comité de Integridad del Activo por el área de pozos.</li>
             </ul>
           </li>
           <li class="role">
-            <p class="date"><time datetime="2021-09">Sep. 2021</time> – <time datetime="2023-11">nov. 2023</time></p>
-            <h4>Trainee</h4>
+            <p class="date"><time datetime="2024-02">Feb. 2024</time> – <time datetime="2025-10">oct. 2025</time></p>
+            <h4>Ingeniero de Control de Producción e Inyección</h4>
+            <p class="role-summary">Seguimiento de aproximadamente 45 patrones de inyección de agua, análisis de eficiencia vertical y balance de patrones.</p>
             <ul class="role-details">
-              <li><strong>Bombeo electrosumergible.</strong> Correlacioné presión y producción para detectar problemas del equipo de fondo y ajustar parámetros operativos.</li>
-              <li><strong>Automatización.</strong> Diseñé herramientas internas para procesar datos técnicos y reducir el trabajo manual en el diagnóstico de pozos.</li>
-              <li><strong>Inyección de agua.</strong> Apoyé el seguimiento de las variables operativas del proyecto de recobro.</li>
+              <li><strong>Optimización.</strong> Definí acciones de superficie, aplicaciones químicas y mejoras hidráulicas.</li>
+              <li><strong>Trabajo con ingeniería.</strong> Apoyé la selección de pozos para pruebas y workover junto con desarrollo e ingeniería.</li>
+            </ul>
+          </li>
+          <li class="role">
+            <p class="date"><time datetime="2021-09">Sep. 2021</time> – <time datetime="2024-02">feb. 2024</time></p>
+            <h4>Ingeniero de Control de Producción</h4>
+            <ul class="role-details">
+              <li><strong>Vigilancia de pozos.</strong> Seguimiento de cerca de 100 pozos productores, diagnóstico BES, ajustes operativos y sustento técnico de intervenciones.</li>
+              <li><strong>Analítica.</strong> Desarrollé tableros Power BI que redujeron aproximadamente un 60 % el tiempo de recuperación de información para el diagnóstico y la selección de intervenciones.</li>
+              <li><strong>Confiabilidad.</strong> Contribuí, desde septiembre de 2021 hasta 2023, al desempeño del equipo que mantuvo el índice anual de falla ≤0,09.</li>
             </ul>
           </li>
         </ol>
@@ -105,11 +126,11 @@
         <ol class="past-timeline">
           <li>
             <p class="date"><time datetime="2021-03">Mar.</time> – <time datetime="2021-09">sep. 2021</time></p>
-            <div><h4>Product Specialist</h4><p class="company">Open International</p></div>
+            <div><h4>Product Support Services Specialist</h4><p class="company">Open International</p><p>Diagnóstico de incidencias, configuración de software y coordinación de escalamiento con equipos internos.</p></div>
           </li>
           <li>
             <p class="date"><time datetime="2020-11">Nov. 2020</time> – <time datetime="2021-02">feb. 2021</time></p>
-            <div><h4>Lead Research Representative</h4><p class="company">Virtuagym</p></div>
+            <div><h4>Lead Research Representative</h4><p class="company">Virtuagym</p><p>Recopilación, enriquecimiento y actualización de bases de datos comerciales para el mercado estadounidense.</p></div>
           </li>
           <li>
             <p class="date"><time datetime="2020-06">Jun.</time> – <time datetime="2020-10">oct. 2020</time></p>
@@ -119,20 +140,51 @@
             <p class="date"><time datetime="2019-09">Sep. 2019</time> – <time datetime="2020-03">mar. 2020</time></p>
             <div><h4>Ingeniero Residente</h4><p class="company">Coestructuras S.A.S.</p><p>Coordiné equipos, materiales y subcontratistas, y verifiqué la ejecución y la calidad de obra.</p></div>
           </li>
+          <li>
+            <p class="date">Mar. – abr. y ago. – sep. 2019</p>
+            <div><h4>Docente de Matemáticas</h4><p class="company">Fundación Alvaralice</p><p>Formación en matemáticas básicas para el programa Rumbo Joven.</p></div>
+          </li>
+          <li>
+            <p class="date"><time datetime="2017-07">Jul. 2017</time> – <time datetime="2018-01">ene. 2018</time></p>
+            <div><h4>Aprendiz universitario · Gerencia de Yacimientos</h4><p class="company">Ecopetrol</p><p>QA/QC de registros de Rubiales, análisis de presión y distribución de producción y modelo analítico de inyección de agua para Bonanza.</p></div>
+          </li>
         </ol>
       </section>
+    </section>
+
+    <section class="developments" id="desarrollos" aria-labelledby="desarrollos-titulo">
+      <div class="shell section">
+        <h2 id="desarrollos-titulo">Herramientas que llevo a la operación</h2>
+        <p class="section-description">Desarrollos propios aplicados a problemas de ingeniería.</p>
+        <div class="project-list">
+          <article class="project">
+            <h3>Simulación y optimización de redes</h3>
+            <p>Herramienta que utilizo para distribuir cargas de estaciones y líneas, evaluar alineaciones y seleccionar pozos con restricciones de capacidad. Calcula balances y velocidades.</p>
+            <p class="project-tech">Python · Streamlit · SciPy · MILP</p>
+            <details><summary>Ver aplicación en ingeniería</summary><p>Desarrollada y validada con apoyo de IA para comparar alternativas de operación de la red.</p></details>
+          </article>
+          <article class="project">
+            <h3>Gestión energética del campo</h3>
+            <p>Análisis de consumo, generación, costos e intensidad energética, incluidos kWh por barril de crudo y de fluido. Su evolución sustentó la decisión de avanzar con la iniciativa de gestión energética.</p>
+            <p class="project-tech">Python · pandas · Plotly · Streamlit</p>
+            <details><summary>Ver aplicación en ingeniería</summary><p>Actualmente aplico buenas prácticas de gestión de energía al monitoreo de equipos de bombeo electrosumergible.</p></details>
+          </article>
+        </div>
+        <p class="software-note">También desarrollo una aplicación de formularios para mi emprendimiento, con generación, traducción y resumen de respuestas mediante Next.js, TypeScript, Supabase y Claude API.</p>
+      </div>
     </section>
 
     <section class="education" id="formacion" aria-labelledby="formacion-titulo">
       <div class="section shell">
         <h2 id="formacion-titulo">Formación</h2>
         <ul class="studies">
-          <li><span class="date">En curso</span><h3>Maestría en Administración de la Energía y sus Fuentes Renovables</h3><p>Tecnológico de Monterrey</p></li>
+          <li><span class="date">2025 – 2026 · Candidato a grado</span><h3>Maestría en Administración de la Energía y sus Fuentes Renovables</h3><p>Tecnológico de Monterrey</p></li>
           <li><span class="date">2013 – 2018</span><h3>Ingeniería de Petróleos</h3><p>Universidad Nacional de Colombia</p></li>
           <li><span class="date">2021 – 2022</span><h3>Certified Tech Developer</h3><p>Digital House</p></li>
           <li><span class="date">2020</span><h3>Data Science for All</h3><p>Correlation One</p></li>
           <li><span class="date">2016</span><h3>Intercambio en Ingeniería de Petróleos</h3><p>Universidad Nacional Autónoma de México</p></li>
         </ul>
+        <p class="skills-note"><strong>Herramientas e idiomas.</strong> PIPESIM, Sahara, Python, SQL, Power BI y Git/GitHub. Español nativo e inglés C1, Michigan English Test (2021).</p>
       </div>
     </section>
 
