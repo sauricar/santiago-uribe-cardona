@@ -3,7 +3,7 @@ document.documentElement.classList.add('js');
 const menuButton = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('#navegacion');
 const navigationLinks = [...navigation.querySelectorAll('a')];
-const sectionLinks = navigationLinks.map(link => ({
+const sectionLinks = navigationLinks.filter(link => link.getAttribute('href').startsWith('#')).map(link => ({
   link,
   section: document.querySelector(link.getAttribute('href')),
 }));
@@ -30,6 +30,7 @@ navigation.addEventListener('click', event => {
   const link = event.target.closest('a');
   if (!link || !navigation.classList.contains('is-open')) return;
   closeMenu();
+  if (!link.getAttribute('href').startsWith('#')) return;
   const destination = document.querySelector(link.getAttribute('href'));
   destination.setAttribute('tabindex', '-1');
   destination.focus({ preventScroll: true });
@@ -54,6 +55,7 @@ function updateReadingPosition() {
       active = entry.link;
     }
   }
+  if (available > 0 && fraction >= .995) active = sectionLinks.at(-1)?.link;
   for (const link of navigationLinks) {
     if (link === active) link.setAttribute('aria-current', 'location');
     else link.removeAttribute('aria-current');
@@ -74,8 +76,22 @@ const flow = document.querySelector('.engineering-flow');
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver(entries => {
     if (!entries.some(entry => entry.isIntersecting)) return;
-    if (!reducedMotion.matches) flow.classList.add('flow-arrives');
+    if (!reducedMotion.matches) {
+      flow.classList.add('flow-arrives');
+      flow.closest('.approach').classList.add('surface-arrives');
+    }
     observer.disconnect();
   }, { threshold: .6 });
   observer.observe(flow);
 }
+
+reducedMotion.addEventListener('change', () => {
+  if (!reducedMotion.matches) return;
+  flow.classList.remove('flow-arrives');
+  flow.closest('.approach').classList.remove('surface-arrives');
+  navigation.getAnimations().forEach(animation => animation.cancel());
+});
+
+window.matchMedia('(min-width: 64.001rem)').addEventListener('change', event => {
+  if (event.matches) closeMenu();
+});
