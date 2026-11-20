@@ -72,11 +72,11 @@ nav a:hover { color: var(--blue); text-decoration: underline; }
 @keyframes focus-arrival { from { filter: blur(3px); opacity: .75; transform: translateY(4px); } to { filter: blur(0); opacity: 1; transform: translateY(0); } }
 .hero-summary { grid-area: summary; align-self: start; }
 h1 { font-size: clamp(2.85rem, 5.5vw, 4.8rem); font-weight: 800; letter-spacing: -.04em; line-height: 1.04; }
-.hero-profession { margin-top: 1.15rem; font-size: clamp(1.2rem, 2vw, 1.5rem); font-weight: 750; letter-spacing: -.02em; }
-.hero-qualification { max-width: 47ch; margin-top: .45rem; font-size: 1rem; line-height: 1.55; color: var(--muted); }
+.hero-profession { margin-top: 1.15rem; color: var(--blue); font-size: clamp(1.2rem, 2vw, 1.5rem); font-weight: 750; letter-spacing: -.02em; }
+.hero-profession span { white-space: nowrap; }
+.hero-qualification { max-width: 47ch; margin-top: .65rem; font-size: 1rem; line-height: 1.55; color: var(--blue); font-weight: 550; }
 .hero-qualification span { white-space: normal; }
-.hero-role { color: var(--blue); font-size: clamp(1.6rem, 2.5vw, 2rem); line-height: 1.17; letter-spacing: -.03em; font-weight: 750; }
-.hero-intro { max-width: 52ch; margin-top: 1rem; color: var(--muted); font-size: clamp(1rem, 1.35vw, 1.1rem); }
+.hero-intro { max-width: 52ch; color: var(--muted); font-size: clamp(1rem, 1.35vw, 1.1rem); }
 .actions { display: flex; align-items: center; flex-wrap: wrap; gap: .8rem 1.25rem; margin-top: 1.85rem; }
 .button { display: inline-flex; justify-content: center; align-items: center; min-height: 3.25rem; padding: .7rem 1.25rem; background: var(--blue); border-radius: .5rem; color: var(--white); font-weight: 700; font-size: .875rem; text-decoration: none; transition: background-color .25s var(--ease), color .25s var(--ease); }
 .button:hover { background: var(--ink); }
@@ -85,7 +85,7 @@ h1 { font-size: clamp(2.85rem, 5.5vw, 4.8rem); font-weight: 800; letter-spacing:
   grid-area: portrait;
   align-self: center;
   width: 100%;
-  max-width: 26rem;
+  max-width: 29rem;
   justify-self: end;
   min-width: 0;
   border-radius: .75rem;
@@ -146,7 +146,11 @@ h2 { font-size: clamp(2.2rem, 4.5vw, 4rem); letter-spacing: -.04em; font-weight:
 .project h3 { grid-column: 1; grid-row: 1 / 4; max-width: 23ch; color: var(--lime); font-size: clamp(1.45rem, 2.6vw, 2rem); letter-spacing: -.025em; }
 .project p { grid-column: 2; color: #d8e6d9; max-width: 56ch; }
 .project .project-tech { font: 500 .875rem/1.7 var(--mono); color: var(--white); }
-.software-note { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #729882; color: #d8e6d9; max-width: 75ch; }
+.training-offer { margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid #729882; color: #d8e6d9; }
+.training-offer h3 { max-width: 35ch; color: var(--white); font-size: clamp(1.35rem, 2.4vw, 1.75rem); }
+.training-offer p { max-width: 70ch; margin-top: .85rem; }
+.training-offer .text-link { display: inline-block; padding-block: .65rem; margin-top: .6rem; color: var(--lime); }
+.training-offer a:focus-visible { outline-color: var(--lime); }
 
 .education { background: #e9eee9; padding: clamp(3.5rem, 7vw, 6.35rem) 0; }
 .education .section { padding-block: 0; }
