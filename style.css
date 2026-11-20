@@ -147,6 +147,16 @@ h2 { font-size: clamp(2rem, 3.7vw, 3.25rem); letter-spacing: -.035em; font-weigh
 .past-timeline p { max-width: 68ch; }
 .employment-note { max-width: 23ch; font-size: .9rem; }
 
+#trayectoria p:not(.date):not(.company),
+#trayectoria .role-details li,
+#desarrollos p:not(.project-tech),
+#formacion p {
+  text-align: justify;
+  text-align-last: start;
+  text-wrap: wrap;
+  hyphens: auto;
+}
+
 .developments { background: var(--ink); color: var(--white); }
 .developments .shell { border-color: rgb(255 255 255 / .2); }
 .developments h2 { max-width: 20ch; }
